@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'rest_framework',
     'achei',
-    'maquiadoras'
+    'maquiadoras',
+    'portfolio'
 ]
 
 REST_FRAMEWORK = {

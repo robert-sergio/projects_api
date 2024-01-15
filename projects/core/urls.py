@@ -23,6 +23,7 @@ urlpatterns = [
 
     path('maquiadoras/', include('maquiadoras.urls')),
     path('estorias/', include('estorias.urls')),
+    path('portfolio/', include('portfolio.urls')),
 
     # YOUR PATTERNS
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
