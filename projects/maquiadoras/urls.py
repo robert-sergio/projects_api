@@ -1,8 +1,5 @@
 from django.urls import path
-from .views import ( AtendimentosAPIView, AtendimentoAPIView,  ClientesAPIView, ProfissionaisAPIView, AgendasAPIView, AgendaAPIView,  ClienteAPIView,
-                    LoginClienteAPIVIew, CriarAtendimentoAPIView, CreateProfissionalAPIView, UpdtProfissionalAPIView,
-                    CardAgendaAPIView, ServicosProfissionalAPIView, FiltrosPesquisaAPIView
-                    )
+from .views import *
 
 urlpatterns = [
     path('clientes/', ClientesAPIView.as_view(), name='clientes'),

@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drf_spectacular',
     'rest_framework',
+    'achei',
+    'maquiadoras'
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,11 +83,11 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.getenv('PGDATABASE', 'projects'),
-        'USER': os.getenv('PGUSER', 'projects'),
-        'PASSWORD': os.getenv('PGPASSWORD', 'admin'),
-        'HOST': os.getenv('PGHOST', 'localhost'),
-        'PORT': os.getenv('PGPORT', '5432'),
+        'NAME': os.getenv('PGDATABASE', ''),
+        'USER': os.getenv('PGUSER', ''),
+        'PASSWORD': os.getenv('PGPASSWORD', ''),
+        'HOST': os.getenv('PGHOST', ''),
+        'PORT': os.getenv('PGPORT', ''),
     }
 }
 
